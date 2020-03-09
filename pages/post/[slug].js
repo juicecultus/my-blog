@@ -2,6 +2,7 @@ import groq from 'groq';
 import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
 import client from '../../client';
+import '../../styles/main.scss';
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source);
@@ -15,33 +16,37 @@ const Post = props => {
     authorImage,
     body = []
   } = props;
+
   return (
-    <article style={{ paddingLeft: 20, paddingRight: 20 }}>
-      <h1 style={{ textAlign: 'center' }}>{title}</h1>
-      <span>By {name}</span>
+    <article>
+      <h1>{title}</h1>
       {categories && (
-        <ul>
-          Posted in
+        <div className='categoriesTop'>
           {categories.map(category => (
-            <li key={category}>{category}</li>
+            <span key={category}>{category} </span>
           ))}
-        </ul>
+        </div>
       )}
-      <div>
-        {authorImage && (
-          <div>
-            <img
-              src={urlFor(authorImage)
-                .width(50)
-                .url()}
-            />
-          </div>
-        )}
+      <div className='authorName'>
+        <span>By {name}</span>
       </div>
+      {/* <div className='authorImage'>
+        <>
+          {authorImage && (
+            <div>
+              <img
+                src={urlFor(authorImage)
+                  .width(50)
+                  .url()}
+              />
+            </div>
+          )}
+        </>
+      </div> */}
 
       <BlockContent
         blocks={body}
-        imageOptions={{ w: 675 /*h: 1024, fit: 'max'*/ }}
+        imageOptions={{ w: 700, h: 1024, fit: 'max' }}
         {...client.config()}
       />
     </article>

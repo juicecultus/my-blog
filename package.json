@@ -15,11 +15,17 @@
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^1.149.2",
     "@sanity/image-url": "^0.140.17",
+    "@zeit/next-sass": "^1.0.1",
     "core-js": "^3.6.4",
+    "font-awesome": "^4.7.0",
     "groq": "^1.149.0",
     "next": "^9.2.2",
+    "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "file-loader": "^5.1.0"
   }
 }

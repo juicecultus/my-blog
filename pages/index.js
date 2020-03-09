@@ -1,9 +1,13 @@
-const index = () => {
+import Layout from '../components/MyLayout';
+
+const Index = () => {
   return (
-    <div>
-      <p>Hello world!</p>
-    </div>
+    <Layout>
+      <div>
+        <p>Hello world!</p>
+      </div>
+    </Layout>
   );
 };
 
-export default index;
+export default Index;
