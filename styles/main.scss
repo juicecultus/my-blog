@@ -1,108 +1,48 @@
 @font-face {
-  font-family: Montserrat;
-  src: url('/static/fonts/Montserrat-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Playfair Display', serif;
+  src: url('/fonts/PlayfairDisplay-Black.ttf');
+  // font-weight: normal;
+  // font-style: normal;
 }
 
-@font-face {
-  font-family: Montserrat;
-  src: url('/static/fonts/Montserrat-Bold.ttf');
-  font-weight: bold;
-  font-style: normal;
+* {
+  // background: black;
 }
 
-@font-face {
-  font-family: Montserrat;
-  src: url('/static/fonts/Montserrat-Light.ttf');
-  font-weight: lighter;
-  font-style: normal;
+html {
+  height: 100%;
 }
 
-@font-face {
-  font-family: Montserrat;
-  src: url('/static/fonts/Montserrat-Italic.ttf');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: Manrope;
-  src: url('/static/fonts/manrope-bold.woff2');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Manrope;
-  src: url('/static/fonts/manrope-light.woff2');
-  font-weight: lighter;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Manrope;
-  src: url('/static/fonts/manrope-medium.woff2');
-  font-weight: bolder;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Manrope;
-  src: url('/static/fonts/manrope-regular.woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Manrope;
-  src: url('/static/fonts/manrope-semibold.woff2');
-  font-weight: bolder;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Manrope;
-  src: url('/static/fonts/manrope-thin.woff2');
-  font-weight: lighter;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Wonder;
-  src: url('/static/fonts/wonder-webfont.woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-html,
 body {
-  font-family: 'Manrope', 'Helvetica';
-  padding-right: 20px;
-  padding-left: 20px;
+  font-size: 100%;
+  // color: paleturquoise;
+  color: darkslategrey;
+}
+
+p {
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  font: 16px/25px georgia, 'times new roman', serif;
 }
 
 a {
-  font-family: Manrope;
-  font-weight: 300;
-  background-color: paleturquoise;
+  color: #ff8661;
 }
 
 h1 {
-  font-family: 'Manrope';
-  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
   font-size: 42px;
   text-align: center;
 }
 
 h2 {
-  font-family: 'Manrope';
-  font-size: 24px;
   text-align: center;
 }
 
 blockquote {
-  font-family: 'Manrope';
+  font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-size: 24px;
   color: palevioletred;
@@ -124,23 +64,15 @@ blockquote {
 .categoriesTop {
   color: peru;
   text-align: center;
-  font-family: 'Manrope';
-  font-weight: 500;
-  font-size: 18px;
-  font-style: bold;
 }
 
 figure {
-  flex: content;
-  padding-left: 0 !important;
+  margin-inline-start: 0em;
+  margin-inline-end: 0em;
 }
 
 img {
   width: 100%;
   height: auto;
-}
-
-article {
-  padding-left: 20;
-  padding-right: 20;
+  // max-width: 400px;
 }

@@ -19,7 +19,6 @@ const Post = props => {
 
   return (
     <article>
-      <h1>{title}</h1>
       {categories && (
         <div className='categoriesTop'>
           {categories.map(category => (
@@ -27,7 +26,9 @@ const Post = props => {
           ))}
         </div>
       )}
+      <h1>{title}</h1>
       <div className='authorName'>
+        <p> - - - </p>
         <span>By {name}</span>
       </div>
       {/* <div className='authorImage'>
