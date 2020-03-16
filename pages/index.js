@@ -1,25 +1,30 @@
 import Link from 'next/link';
 import groq from 'groq';
 import client from '../client';
-import '../styles/main.scss';
+import Layout from '../components/Layout';
+import { Jumbotron, Container } from 'reactstrap';
 
 const Index = props => {
   const { posts = [] } = props;
   return (
-    <div>
-      <h1>Welcome to my blog!</h1>
-      {posts.map(
-        ({ _id, title = '', slug = '', _updatedAt = '' }) =>
-          slug && (
-            <li key={_id}>
-              <Link href='/post/[slug]' as={`/post/${slug.current}`}>
-                <a>{title}</a>
-              </Link>{' '}
-              ({new Date(_updatedAt).toDateString()})
-            </li>
-          )
-      )}
-    </div>
+    <Layout>
+      <Jumbotron fluid>
+        <Container fluid>
+          <h1 className='display-3'>Welcome to my blog!</h1>
+          {posts.map(
+            ({ _id, title = '', slug = '', _updatedAt = '' }) =>
+              slug && (
+                <li key={_id}>
+                  <Link href='/post/[slug]' as={`/post/${slug.current}`}>
+                    <a>{title}</a>
+                  </Link>{' '}
+                  ({new Date(_updatedAt).toDateString()})
+                </li>
+              )
+          )}
+        </Container>
+      </Jumbotron>
+    </Layout>
   );
 };
 

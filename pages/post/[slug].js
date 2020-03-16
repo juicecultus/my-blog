@@ -3,6 +3,8 @@ import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
 import client from '../../client';
 import '../../styles/main.scss';
+import Layout from '../../components/Layout';
+import Link from 'next/link';
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source);
@@ -18,7 +20,7 @@ const Post = props => {
   } = props;
 
   return (
-    <article>
+    <Layout>
       {categories && (
         <div className='categoriesTop'>
           {categories.map(category => (
@@ -50,7 +52,7 @@ const Post = props => {
         imageOptions={{ w: 700, h: 1024, fit: 'max' }}
         {...client.config()}
       />
-    </article>
+    </Layout>
   );
 };
 

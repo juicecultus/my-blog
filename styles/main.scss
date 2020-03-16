@@ -1,8 +1,3 @@
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins/_breakpoints';
-@import '~bootstrap/scss/bootstrap';
-
 @font-face {
   font-family: 'Playfair Display', serif;
   src: url('/fonts/PlayfairDisplay-Black.ttf');
@@ -80,4 +75,12 @@ img {
   width: 100%;
   height: auto;
   // max-width: 400px;
+}
+
+.specialcolor {
+  background-color: lightpink;
+}
+
+.navbar {
+  font-family: 'Playfair Display', serif;
 }
